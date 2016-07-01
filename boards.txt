@@ -28,6 +28,11 @@ arduino_101.build.variant_system_lib=arc32drv_arduino101
 arduino_101.build.vid=0x8087
 arduino_101.build.pid=0x0AB6
 
+menu.debugger=Debugger
+arduino_101.menu.debugger.yes=Yes
+arduino_101.menu.debugger.yes.recipe.hooks.objcopy.preobjcopy.1.pattern="{openocd.path}bin/openocd.exe" -f "{openocd.path}scripts/interface/ftdi/flyswatter2.cfg" -f "{openocd.path}scripts/board/quark_se.cfg"
+arduino_101.menu.debugger.yes.recipe.hooks.objcopy.preobjcopy.2.pattern="{compiler.path}arc-elf32-gdb" "{build.path}/../arduino101_sketch.debug.elf"
+arduino_101.menu.debugger.no=No
 ##############################################################
 
 

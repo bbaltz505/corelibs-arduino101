@@ -87,6 +87,9 @@ recipe.output.save_file={build.project_name}.{build.variant}.hex
 recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
 recipe.size.regex=^(?:text|ctors|rodata|datas)\s+([0-9]+).*
 
+## Debug tools
+openocd.path={runtime.tools.openocd.path}/
+
 # Arc Uploader/Programmers tools
 # -------------------
 tools.arduino101load.cmd.path={runtime.tools.arduino101load.path}/arduino101load/arduino101load
